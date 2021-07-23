@@ -11,20 +11,19 @@
     <section>
         <h1 id="title">Tic Tac Toe</h1>
         <div class="container">
-            <div id="0" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="1" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="2" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="3" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="4" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="5" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="6" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="7" class="cell" onclick="chancePlayed(this.id)"></div>
-            <div id="8" class="cell" onclick="chancePlayed(this.id)"></div>
+            <div id="0" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="1" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="2" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="3" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="4" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="5" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="6" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="7" class="cell" onclick="changePlayer(this.id)"></div>
+            <div id="8" class="cell" onclick="changePlayer(this.id)"></div>
         </div>
-        <h2 class="status"></h2>
-        <h2 id='currentPlayer'></h2>
-        <h2 id='gameResult'></h2>
-        <button class="restart">Restart Game</button>
+        <h2 id='status'></h2>
+        <h2 id='error'></h2>
+        <button class="restart" onclick="restart()">Restart Game</button>
     </section>
 
     <script src="js/script.js"></script>
