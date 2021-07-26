@@ -39,7 +39,15 @@ section {
     cursor: pointer;
 }
 
-.restart:hover {
+.restart:active {
     background-color: #555555;
     color: white;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
 }
