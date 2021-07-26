@@ -35,8 +35,13 @@ function validateWinning(){
         if(counters.X==3 || counters.O==3){
             gameResult = "Player "+value+ " won the game."
             gameStop = true
-            break; 
+            break;
         }
+    }
+
+    if(remainingTries==0 && gameResult==''){
+        gameStop = true
+        gameResult = "Game Draw!"
     }
 
     printStatus(gameResult)
@@ -82,5 +87,10 @@ function changePlayer(id){
 }
 
 function restart(){    
-   console.log("Game restart logic")
+    clearStatus()
+    clearError()
+    gameStop = false
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    remainingTries = gameState.length
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
