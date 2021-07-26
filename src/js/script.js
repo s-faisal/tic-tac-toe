@@ -35,7 +35,7 @@ function validateWinning(){
         if(counters.X==3 || counters.O==3){
             gameResult = "Player "+value+ " won the game."
             gameStop = true
-            break;
+            break; 
         }
     }
 
