@@ -21,6 +21,27 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
+function validateWinning(){
+    let gameResult = ""
+    for(var i=0; i<winningConditions.length; i++){
+        let counters = {X:0,O:0}
+        let value = ""
+        for(var j=0; j<winningConditions[i].length;j++){
+            value = gameState[winningConditions[i][j]]
+            if(value){
+                counters[value]++
+            }
+        }
+        if(counters.X==3 || counters.O==3){
+            gameResult = "Player "+value+ " won the game."
+            gameStop = true
+            break;
+        }
+    }
+
+    printStatus(gameResult)
+}
+
 function printStatus(result){    
     if(result){
         document.getElementById('status').innerHTML = result
@@ -58,4 +79,8 @@ function changePlayer(id){
     }else{
         printError("Please restart the game.")
     }
+}
+
+function restart(){    
+   console.log("Game restart logic")
 }
